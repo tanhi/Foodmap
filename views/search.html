@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Foodmap</title>
+  <link rel="icon" type="image/png" href="../assets/images/foodmap.png">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <div class="container-fluid" id="container-main">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h1>Foodmap</h1>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <iframe class="col-xs-12 google-map" width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.3172724397637!2d-99.20623348571796!3d19.441883045423054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2021098682cf5%3A0x13c8b88818077a44!2sPlaza+Carso%2C+Amp+Granada%2C+11529+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses-419!2smx!4v1516382887843" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-10 col-lg-offset-1">
+        <h2>Comida cerca de ti</h2>
+        <div id="custom-search-input">
+          <div class="input-group col-md-12">
+            <input type="text" class="form-control input-lg" placeholder="Filtrar por tipos de comida" id="input-search"/>
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-lg" type="button" id="button-search">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </span>
+          </div>
+          <span class="help">Filtrar tipo de comida: mexicana, vegetariana y selvatica.</span>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="gallery" class="row">
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content color-modal">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title text-center text-bold" id="modal-titleRest"></h4>
+          </div>
+          <div class="modal-body text-center">
+            <div id="modal-imagesRest" class="img-modal">
+              <img src="../assets/images/map.jpg" alt="" class="img-responsive" id="modal-rest-images">
+            </div>
+            <p id="modal-addressRest" class="modal-address"></p>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-warning btn-block"  data-dismiss="modal">Ordenar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/search.js"></script>
+</body>
+</html>
